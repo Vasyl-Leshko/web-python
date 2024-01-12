@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="container d-flex mt-5 mb-5">
+    <div class="row ml-5">
+        <div class="col-md-6 d-flex justify-content-center align-items-center">
+            <div class="text-center">
+                <h2 class="custom-title">My name is <span class="title custom-title">Leshko Vasyl</span></h2>
+                <h2 class="custom-title">Welcome to my portfolio website. I am a student of Precarpathian National University and I hope you will be interested in browsing my portfolio site.</h2>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <img style="width: 350px;" class="img-fluid rounded-circle shadow" src="{{ url_for('static', filename='images/img2.jpg') }}" alt="">
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
+
+{% endblock %}
