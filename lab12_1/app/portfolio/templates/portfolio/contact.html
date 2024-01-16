@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %} Contact{% endblock %}
+
+{%
+    set contacts = {
+        'https://t.me/levas0': url_for('static', filename='images/telegram.png'),
+        'https://www.instagram.com/leshko_vasil/': url_for('static', filename='images/instagram.png'),
+        'mailto:vasialeshko12@gmail.com': url_for('static', filename='images/gmail.png'),
+    }
+%}
+
+
+{% block body %}
+<div class="contact-container">
+    <h1 class="title text-center custom-title">My Contacts</h1>
+    <div class="row">
+        {% for link, logo in contacts.items() %}
+        <div class="col-6 col-sm-3">
+            <a href="{{link}}">
+                <img class="img" width="150px" src="{{logo}}" alt="">
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
